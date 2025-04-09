@@ -25,7 +25,7 @@ Este projeto foi desenvolvido em Python com o objetivo de permitir a exclusão e
 ## ✅ Exemplos de Uso
 
 ```python
-url = f"URLAQUI/{despesa_id}"
+url = f"URLAQUI/{id}"
 
 # Excluindo itens específicas
 ids_para_excluir = range(1, 100)  # de 1 até 100
