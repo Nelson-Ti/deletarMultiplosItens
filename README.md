@@ -1,13 +1,19 @@
 
-# 🗑️ Deletar Múltiplos Itens - Python
+# 🗑️ Exclusão em Massa via API - Python
 
-Este projeto foi desenvolvido em Python com o objetivo de permitir a exclusão em massa de registros, definidos pelo usuário.
+Este script em Python realiza exclusões em massa de registros através de requisições HTTP `DELETE` para uma API REST. A ferramenta é útil para remover diversos itens (como despesas, contratos, usuários etc.) de forma automatizada e segura, utilizando um intervalo de IDs e cabeçalhos personalizados de autenticação.
 
 ## 🚀 Funcionalidades
 
-- Exclusão de múltiplos itens por ID ou critério de seleção.
-- Validação para evitar exclusão de itens inexistentes.
-- Log de ações executadas.
+- Envia requisições `DELETE` para uma API REST com base em um intervalo de IDs.
+- Permite configurar headers personalizados (como token de autorização, origem e user-agent).
+- Exibe o status de cada exclusão no terminal (sucesso, não encontrado, erro).
+- Pode ser facilmente adaptado para diferentes endpoints ou APIs.
+
+## 📦 Requisitos
+
+- Python 3.10+
+- Biblioteca `requests` (instalável com `pip install requests`
 
 ## 🧰 Tecnologias Utilizadas
 
@@ -25,7 +31,7 @@ Este projeto foi desenvolvido em Python com o objetivo de permitir a exclusão e
 ## ✅ Exemplos de Uso
 
 ```python
-url = f"URLAQUI/{despesa_id}"
+url = f"URLAQUI/{id}"
 
 # Excluindo itens específicas
 ids_para_excluir = range(1, 100)  # de 1 até 100
