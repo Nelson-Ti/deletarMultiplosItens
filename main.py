@@ -1,6 +1,6 @@
 import requests
 
-# ID da despesa para testar
+# ID do registro para testar
 ids_para_excluir = range(1, 100)  # de 1 até 100
 
 # Headers (troque pelo seu token real!)
@@ -13,17 +13,14 @@ headers = {
     "Connection": "keep-alive"
 } 
 
-# Requisição GET
-#response = requests.delete(url, headers=headers)
-
-# Loop para deletar cada despesa
-for despesa_id in ids_para_excluir:
-    url = f"URL/{despesa_id}"
+# Loop para deletar cada registro
+for id in ids_para_excluir:
+    url = f"URL/{id}"
     response = requests.delete(url, headers=headers)
 
     if response.status_code == 200:
-        print(f"✅ Despesa {despesa_id} excluída com sucesso.")
+        print(f"✅ Registro {id} excluída com sucesso.")
     elif response.status_code == 404:
-        print(f"⚠️ Despesa {despesa_id} não encontrada.")
+        print(f"⚠️ Registro {id} não encontrada.")
     else:
-        print(f"❌ Erro ao excluir despesa {despesa_id}: {response.status_code} - {response.text}")
+        print(f"❌ Erro ao excluir registro {id}: {response.status_code} - {response.text}")
